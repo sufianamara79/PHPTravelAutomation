@@ -1,0 +1,14 @@
+/Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/PHPTravelsAutomation.exe
+/Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/PHPTravelsAutomation.pdb
+/Users/sufianamara/GITHub/PHPTravelsAutomation/obj/x86/Debug/PHPTravelsAutomation.csprojAssemblyReference.cache
+/Users/sufianamara/GITHub/PHPTravelsAutomation/obj/x86/Debug/PHPTravelsAutomation.csproj.CoreCompileInputs.cache
+/Users/sufianamara/GITHub/PHPTravelsAutomation/obj/x86/Debug/PHPTravelsAutomation.exe
+/Users/sufianamara/GITHub/PHPTravelsAutomation/obj/x86/Debug/PHPTravelsAutomation.pdb
+/Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/nunit.framework.dll
+/Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/WebDriver.dll
+/Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/WebDriver.Support.dll
+/Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/nunit.framework.pdb
+/Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/nunit.framework.xml
+/Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/WebDriver.xml
+/Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/WebDriver.Support.xml
+/Users/sufianamara/GITHub/PHPTravelsAutomation/obj/x86/Debug/PHPTravelsAutomation.csproj.CopyComplete
