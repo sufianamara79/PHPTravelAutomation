@@ -21,7 +21,6 @@ namespace PHPTravelsAutomation.Tests
 
             Assert.AreEqual("HOTELS", page.GetActiveService());
 
-           
 
         }
 
