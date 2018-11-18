@@ -13,7 +13,6 @@
 /Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/WebDriver.xml
 /Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/WebDriver.Support.xml
 /Users/sufianamara/GITHub/PHPTravelsAutomation/bin/Debug/Newtonsoft.Json.xml
-/Users/sufianamara/GITHub/PHPTravelsAutomation/obj/x86/Debug/PHPTravelsAutomation.csprojAssemblyReference.cache
 /Users/sufianamara/GITHub/PHPTravelsAutomation/obj/x86/Debug/PHPTravelsAutomation.csproj.CoreCompileInputs.cache
 /Users/sufianamara/GITHub/PHPTravelsAutomation/obj/x86/Debug/PHPTravelsAutomation.csproj.CopyComplete
 /Users/sufianamara/GITHub/PHPTravelsAutomation/obj/x86/Debug/PHPTravelsAutomation.exe

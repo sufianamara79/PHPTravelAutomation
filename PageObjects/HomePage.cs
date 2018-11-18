@@ -21,7 +21,10 @@ namespace PHPTravelsAutomation.PageObjects
         protected IWebElement FieldCheckInTo { get; set; }
 
         [FindsBy(How = How.CssSelector, Using = ".search-button")]
-        protected IWebElement btnSearch { get; set; }
+        protected IWebElement divSearch1 { get; set; }
+
+        [FindsBy(How = How.Name, Using = "flightmanualSearch")]
+        protected IWebElement formFlights { get; set; }
 
         public HomePage(IWebDriver driver)
         {
@@ -64,7 +67,39 @@ namespace PHPTravelsAutomation.PageObjects
 
             js.ExecuteScript("arguments[0].value = '" + adults + "'", txtNumberofAdults);
 
-            btnSearch.Click();
+            divSearch1.Click();
+
+
+        }
+
+        public void SearchForFlight(string cityFrom, string cityTo, string depart, string adults)
+        {
+            IWebElement divFrom = formFlights.FindElement(By.Id("s2id_location_from"));
+
+            IWebElement elementName = divFrom.FindElement(By.ClassName("select2-chosen"));
+
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            string title = (string)js.ExecuteScript("arguments[0].innerText = '" + cityFrom + "'", elementName);
+
+            IWebElement divTo = formFlights.FindElement(By.Id("s2id_location_to"));
+
+            elementName = divTo.FindElement(By.ClassName("select2-chosen"));
+
+            js = (IJavaScriptExecutor)driver;
+            title = (string)js.ExecuteScript("arguments[0].innerText = '" + cityTo + "'", elementName);
+
+            IWebElement elementDeparture = driver.FindElement(By.Name("departure"));
+
+            js.ExecuteScript("arguments[0].value = 2018-12-13", elementDeparture);
+
+
+            IWebElement txtNumberofPassengers = formFlights.FindElement(By.Name("totalManualPassenger"));
+
+            js.ExecuteScript("arguments[0].value = '" + adults + "'", txtNumberofPassengers);
+
+            IWebElement divSearch = driver.FindElement(By.CssSelector(".search-button"));
+
+            formFlights.Submit();
 
 
         }
