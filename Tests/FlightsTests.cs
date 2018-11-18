@@ -32,7 +32,7 @@ namespace PHPTravelsAutomation.Tests
 
             IList<Flights> flights = flightsSearchPage.GetFlightsDetails();
 
-            Assert.AreEqual(12, flights.Count);
+            Assert.AreEqual(20, flights.Count);
         }
 
         [TearDown()]

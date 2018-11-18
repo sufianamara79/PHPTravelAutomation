@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{2A38723F-2792-48A6-962B-7DC625F00018}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PageObjects/FlightsSearchPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/FlightsTests.cs">
     <Files>
       <File FileName="Program.cs" Line="12" Column="2" />
       <File FileName="NUnitTestClass.cs" Line="29" Column="10" />
       <File FileName="packages.config" Line="1" Column="1" />
       <File FileName="Products/Flights.cs" Line="8" Column="30" />
-      <File FileName="Tests/FlightsTests.cs" Line="29" Column="33" />
       <File FileName="Tests/HotelSearchTests.cs" Line="27" Column="8" />
-      <File FileName="PageObjects/FlightsSearchPage.cs" Line="50" Column="1" />
-      <File FileName="PageObjects/HomePage.cs" Line="91" Column="81" />
+      <File FileName="PageObjects/FlightsSearchPage.cs" Line="64" Column="1" />
+      <File FileName="PageObjects/HomePage.cs" Line="99" Column="64" />
+      <File FileName="Tests/FlightsTests.cs" Line="35" Column="31" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
@@ -20,7 +20,6 @@
                   <Node name="FlightsTests" expanded="True">
                     <Node name="TestCase" selected="True" />
                   </Node>
-                  <Node name="HotelSearchTests" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -34,7 +33,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/sufianamara/GITHub/PHPTravelsAutomation/NUnitTestClass.cs" relfile="NUnitTestClass.cs" line="21" column="1" />
-      <Breakpoint file="/Users/sufianamara/GITHub/PHPTravelsAutomation/PageObjects/FlightsSearchPage.cs" relfile="PageObjects/FlightsSearchPage.cs" line="48" column="1" />
+      <Breakpoint file="/Users/sufianamara/GITHub/PHPTravelsAutomation/PageObjects/FlightsSearchPage.cs" relfile="PageObjects/FlightsSearchPage.cs" line="72" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
