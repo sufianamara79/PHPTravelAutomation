@@ -13,7 +13,7 @@ namespace PHPTravelsAutomation.Tests
         ChromeDriver driver;
 
          [Test()]
-        public void TestCase()
+        public void TestFlightsSearch()
         {
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--start-maximized");
@@ -33,6 +33,17 @@ namespace PHPTravelsAutomation.Tests
             IList<Flights> flights = flightsSearchPage.GetFlightsDetails();
 
             Assert.AreEqual(20, flights.Count);
+
+            foreach (Flights flight in flights)
+            {
+                Assert.AreEqual("LUX", flight.travelFrom, "travel from location is not as expected");
+                Assert.AreEqual("DUB", flight.travelTo, "travel to location is not as expected");
+
+                // Insert dates checks here
+
+                // Insert stops checks here
+
+            }
         }
 
         [TearDown()]
