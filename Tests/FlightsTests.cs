@@ -26,7 +26,7 @@ namespace PHPTravelsAutomation.Tests
 
             page.ChooseService("FLIGHTS");
 
-            page.SearchForFlight("LUX", "DXB", "19", "2");
+            page.SearchForFlight("LUX", "DUB", "2018-12-05", "2");
 
             FlightsSearchPage flightsSearchPage = new FlightsSearchPage(driver);
 
@@ -41,9 +41,43 @@ namespace PHPTravelsAutomation.Tests
 
                 // Insert dates checks here
 
-                // Insert stops checks here
-
             }
+
+            // Insert steps to check page 2 flights here
+        }
+
+        [Test()]
+        public void TestFlightsSearchWithFilters()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--start-maximized");
+
+            driver = new ChromeDriver(options);
+
+            driver.Navigate().GoToUrl("https://www.phptravels.net/");
+
+            HomePage page = new HomePage(driver);
+
+            page.ChooseService("FLIGHTS");
+
+            page.SearchForFlight("LUX", "DUB", "2018-12-05", "2");
+
+            FlightsSearchPage flightsSearchPage = new FlightsSearchPage(driver);
+
+            IList<Flights> flights = flightsSearchPage.GetFlightsDetails();
+
+            Assert.AreEqual(20, flights.Count);
+
+            // Insert steps to check flights with zero stops here
+        }
+
+        [Test()]
+        public void TestFlightsBooking()
+        {
+
+            // Add test steps here
+
+
         }
 
         [TearDown()]

@@ -41,6 +41,11 @@ namespace PHPTravelsAutomation.PageObjects
             }
 
             PageFactory.InitElements(driver, this);
+        }  
+
+        public void SetFilter()
+        {
+            // implementation goes here
         }
 
         public IList<Flights> GetFlightsDetails()

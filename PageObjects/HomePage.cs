@@ -82,7 +82,7 @@ namespace PHPTravelsAutomation.PageObjects
 
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             string title = (string)js.ExecuteScript("arguments[0].innerText = '" + cityFrom + "'", elementName);
-            js.ExecuteScript("arguments[0].value = '{\"code\":\"LUX\",\"location\":\"\"}'", elementCode);
+            js.ExecuteScript("arguments[0].value = '{\"code\":\"" + cityFrom + "\",\"location\":\"\"}'", elementCode);
 
             IWebElement divTo = formFlights.FindElement(By.Id("s2id_location_to"));
 
@@ -92,11 +92,11 @@ namespace PHPTravelsAutomation.PageObjects
 
             js = (IJavaScriptExecutor)driver;
             title = (string)js.ExecuteScript("arguments[0].innerText = '" + cityTo + "'", elementName);
-            js.ExecuteScript("arguments[0].value = '{\"code\":\"DUB\",\"location\":\"\"}'", elementCode);
+            js.ExecuteScript("arguments[0].value = '{\"code\":\"" + cityTo + "\",\"location\":\"\"}'", elementCode);
 
             IWebElement elementDeparture = driver.FindElement(By.Name("departure"));
 
-            js.ExecuteScript("arguments[0].value = '2018-12-13'", elementDeparture);
+            js.ExecuteScript("arguments[0].value = '" + depart + "'", elementDeparture);
 
 
             IWebElement txtNumberofPassengers = formFlights.FindElement(By.Name("totalManualPassenger"));
