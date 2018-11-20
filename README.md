@@ -10,4 +10,6 @@ Please complete the following task:
   b. Complete the booking form (with the addition requests) 
   c. Verify that the booking confirmation page contains all the details entered in the previous steps
   
+4. Add 1 or more test cases of your choosing.
+
   Good Luck
