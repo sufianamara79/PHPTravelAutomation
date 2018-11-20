@@ -3,4 +3,6 @@
 
         public string GetActiveService()         {             string activeService = driver.FindElement(By.CssSelector(".active.text-center.go-right a span")).Text;              return activeService;          }
 
+        public string GetPageURL()         {             return driver.Url;          }
+
     } } 

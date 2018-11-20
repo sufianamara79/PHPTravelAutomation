@@ -7,21 +7,26 @@ namespace PHPTravelsAutomation.Tests
     [TestFixture()]
     public class HotelSearchTests
     {
-        ChromeDriver driver = new ChromeDriver();
+        ChromeDriver driver;
+
+        [SetUp()]
+        public void TestStart()
+        {
+            driver = new ChromeDriver();
+
+            driver.Navigate().GoToUrl("https://www.phptravels.net/");
+        }
 
         [Test()]
         public void TestHotelSearchValid()
         {
-
-            driver.Navigate().GoToUrl("https://www.phptravels.net/");
-
-
+  
             HomePage page = new HomePage(driver);
-            page.SearchForHotel("paris", "21", "12", "3");
+            page.SearchForHotel("paris", "23", "24", "3");
 
             Assert.AreEqual("HOTELS", page.GetActiveService());
 
-
+            Assert.AreEqual("https://www.phptravels.net/hotels/search/23-11-2018/24-11-2018/3/0", page.GetPageURL());
         }
 
         [TearDown()]

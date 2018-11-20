@@ -21,7 +21,7 @@ namespace PHPTravelsAutomation.PageObjects
         protected IWebElement FieldCheckInTo { get; set; }
 
         [FindsBy(How = How.CssSelector, Using = ".search-button")]
-        protected IWebElement divSearch1 { get; set; }
+        protected IWebElement divSearch { get; set; }
 
         [FindsBy(How = How.Name, Using = "flightmanualSearch")]
         protected IWebElement formFlights { get; set; }
@@ -56,8 +56,8 @@ namespace PHPTravelsAutomation.PageObjects
 
             FieldCheckInFrom.Click();
 
-            PickDay(fromDay);
-            PickDay(toDay);
+            PickDayIn(fromDay);
+            PickDayOut(toDay);
 
             IWebElement elementTraveller = driver.FindElement(By.Id("travellersInput"));
 
@@ -67,7 +67,7 @@ namespace PHPTravelsAutomation.PageObjects
 
             js.ExecuteScript("arguments[0].value = '" + adults + "'", txtNumberofAdults);
 
-            divSearch1.Click();
+            divSearch.Click();
 
 
         }
@@ -103,20 +103,34 @@ namespace PHPTravelsAutomation.PageObjects
 
             js.ExecuteScript("arguments[0].value = '" + adults + "'", txtNumberofPassengers);
 
-            IWebElement divSearch = driver.FindElement(By.CssSelector(".search-button"));
-
             formFlights.Submit();
 
 
         }
 
-        public void PickDay(string day)
+        public void PickDayIn(string day)
         {
-            IWebElement daysTable = driver.FindElement(By.CssSelector(".datepicker-days .table-condensed"));
+            IWebElement daysTable = driver.FindElement(By.CssSelector("div.datepicker"));
 
             IList<IWebElement> dayElements = daysTable.FindElements(By.CssSelector("td.day"));
 
             foreach(IWebElement element in dayElements)
+            {
+                if (element.Text == day)
+                {
+                    element.Click();
+                    break;
+                }
+            }
+        }
+
+        public void PickDayOut(string day)
+        {
+            IWebElement daysTable = driver.FindElement(By.XPath("//div[contains(@class, 'datepicker dropdown-menu')][2]"));
+
+            IList<IWebElement> dayElements = daysTable.FindElements(By.CssSelector("td.day"));
+
+            foreach (IWebElement element in dayElements)
             {
                 if (element.Text == day)
                 {

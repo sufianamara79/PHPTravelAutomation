@@ -1,7 +1,7 @@
 ﻿using System;
 namespace PHPTravelsAutomation.Products
 {
-    public class Flights
+    public class Flight
     {
         public string travelFrom;
         public string travelTo;

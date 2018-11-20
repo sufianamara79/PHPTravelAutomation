@@ -11,44 +11,49 @@ namespace PHPTravelsAutomation.PageObjects
 {
     public class FlightsSearchPage: BasePage
     {
-        IList<Flights> flights = new List<Flights>();
+        IList<Flight> flights = new List<Flight>();
 
         public FlightsSearchPage(IWebDriver driver)
         {
             base.driver = driver;
 
+            this.IsPageLoaded();
+
+            PageFactory.InitElements(driver, this);
+        }
+
+        public void IsPageLoaded()
+        {
             try
             {
                 var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(120));
                 wait.Until<Boolean>((d) =>
-                 {
-                     string activeService = driver.FindElement(By.CssSelector(".active.text-center.go-right a span")).Text;
+                {
+                    string activeService = driver.FindElement(By.CssSelector(".active.text-center.go-right a span")).Text;
 
-                     if (activeService == "FLIGHTS")
-                     {
-                         return true;
-                     }
-                     else
-                     {
-                         return false;
-                     }
+                    if (activeService == "FLIGHTS")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
 
-                 });
+                });
             }
             catch (WebDriverTimeoutException)
             {
                 throw new WebDriverTimeoutException("Flights results page could not open");
             }
-
-            PageFactory.InitElements(driver, this);
-        }  
+        }
 
         public void SetFilter()
         {
             // implementation goes here
         }
 
-        public IList<Flights> GetFlightsDetails()
+        public IList<Flight> GetFlightsDetails()
         {
 
             IWebElement flightTable = driver.FindElement(By.Id("load_data"));
@@ -60,13 +65,13 @@ namespace PHPTravelsAutomation.PageObjects
             IWebElement flightInfo;
             IWebElement flightFrom;
             IWebElement flightTo;
-            Flights flight;
+            Flight flight;
 
             foreach (IWebElement element in flightElements)
             {
                 js.ExecuteScript("arguments[0].style = 'visibility: visible; animation-name: fadeIn;'", element);
 
-                flight = new Flights();
+                flight = new Flight();
 
                 flightInfo = element.FindElement(By.CssSelector("div div:nth-of-type(2)"));
 

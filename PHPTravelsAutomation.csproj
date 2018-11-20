@@ -62,7 +62,7 @@
     <Compile Include="PageObjects\HomePage.cs" />
     <Compile Include="Tests\HotelSearchTests.cs" />
     <Compile Include="PageObjects\FlightsSearchPage.cs" />
-    <Compile Include="Products\Flights.cs" />
+    <Compile Include="Products\Flight.cs" />
     <Compile Include="Tests\FlightsTests.cs" />
   </ItemGroup>
   <ItemGroup>
