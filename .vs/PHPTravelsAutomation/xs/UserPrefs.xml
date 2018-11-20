@@ -1,34 +1,16 @@
 ﻿<Properties StartupConfiguration="{2A38723F-2792-48A6-962B-7DC625F00018}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PageObjects/BasePage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/FlightsTests.cs">
     <Files>
       <File FileName="Program.cs" Line="12" Column="2" />
       <File FileName="NUnitTestClass.cs" Line="29" Column="10" />
       <File FileName="packages.config" Line="1" Column="1" />
       <File FileName="Products/Flight.cs" Line="4" Column="24" />
-      <File FileName="Tests/HotelSearchTests.cs" Line="22" Column="60" />
+      <File FileName="Tests/HotelSearchTests.cs" Line="21" Column="41" />
       <File FileName="PageObjects/FlightsSearchPage.cs" Line="80" Column="80" />
       <File FileName="PageObjects/HomePage.cs" Line="120" Column="18" />
-      <File FileName="Tests/FlightsTests.cs" Line="33" Column="72" />
-      <File FileName="PageObjects/BasePage.cs" Line="48" Column="10" />
+      <File FileName="Tests/FlightsTests.cs" Line="50" Column="49" />
+      <File FileName="PageObjects/BasePage.cs" Line="42" Column="35" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="PHPTravelsAutomation" expanded="True">
-            <Node name="PHPTravelsAutomation" expanded="True">
-              <Node name="PHPTravelsAutomation" expanded="True">
-                <Node name="Tests" expanded="True">
-                  <Node name="FlightsTests" expanded="True" />
-                  <Node name="HotelSearchTests" expanded="True">
-                    <Node name="TestHotelSearchValid" selected="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.PHPTravelsAutomation PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
