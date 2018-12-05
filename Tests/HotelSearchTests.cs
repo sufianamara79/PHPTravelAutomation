@@ -22,11 +22,11 @@ namespace PHPTravelsAutomation.Tests
         {
   
             HomePage page = new HomePage(driver);
-            page.SearchForHotel("paris", "23", "24", "3");
+            page.SearchForHotel("paris", "5", "6", "3");
 
             Assert.AreEqual("HOTELS", page.GetActiveService());
 
-            Assert.AreEqual("https://www.phptravels.net/hotels/search/23-11-2018/24-11-2018/3/0", page.GetPageURL());
+            Assert.AreEqual("https://www.phptravels.net/hotels/search/05-12-2018/06-12-2018/3/0", page.GetPageURL());
         }
 
         [TearDown()]
